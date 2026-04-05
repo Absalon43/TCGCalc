@@ -12,21 +12,12 @@ public class SimulationRunner : MonoBehaviour
     [HideInInspector] public SimulationResult result;
 
     public int deckSize;
-    public CardDefinition[] cards;
+    public List<CardDefinition> cards;
    
     public void RunSimulation()
     {
         deckSize = 0;
         Deck deck = new Deck();
-        /*deck.cardDefinitions = new List<CardDefinition>()
-            {
-            new CardDefinition { cardName = "Starter A", copies = 3, tag = "Starter", subTag = "" },
-            new CardDefinition { cardName = "Extender A", copies = 3, tag = "Extender", subTag = "" },
-            new CardDefinition { cardName = "Brick", copies = 2, tag = "Brick", subTag = "" },
-            new CardDefinition { cardName = "Generic", copies = 32, tag = "Filler", subTag = "" }
-            };
-        */
-
         deck.cardDefinitions = new List<CardDefinition>();
         
         foreach(var card in cards)
@@ -35,8 +26,6 @@ public class SimulationRunner : MonoBehaviour
             deckSize+=card.copies; 
         }
         
-        int iterations = 100000;
-
         result = Simulation.Run(deck, iterations);
 
         foreach (var kvp in result.tagHits)
@@ -46,5 +35,18 @@ public class SimulationRunner : MonoBehaviour
         }
 
         NewResults.Invoke();
-    }   
+    }
+
+    private CardDefinition newCard;
+
+    public void AddCard(string name, int copies, CardDefinition.Tag tag, CardDefinition.Tag subTag)
+    {
+        newCard = new CardDefinition();
+        newCard.cardName = name;
+        newCard.copies = copies;
+        newCard.tag = tag;
+        newCard.subTag = subTag;
+        
+        cards.Add(newCard);
+    }
 }
