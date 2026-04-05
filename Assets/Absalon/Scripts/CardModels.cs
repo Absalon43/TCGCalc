@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//poopy butt
 public class CardModels
 {
     
