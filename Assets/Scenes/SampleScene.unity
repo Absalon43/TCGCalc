@@ -1478,74 +1478,86 @@ MonoBehaviour:
       m_Calls: []
   deckSize: 0
   cards:
-  - cardName: Cupsy
+  - cardName: Raye
     copies: 3
     tag: 0
-    subTag: 5
-  - cardName: Ash
-    copies: 3
-    tag: 2
-    subTag: 4
-  - cardName: 3 Cooky
-    copies: 3
-    tag: 0
-    subTag: 5
-  - cardName: Lollipo
-    copies: 3
-    tag: 0
-    subTag: 5
-  - cardName: Mignon
+    subTag: 8
+  - cardName: Roze
     copies: 1
     tag: 3
-    subTag: 5
-  - cardName: Surprise
-    copies: 2
-    tag: 1
-    subTag: 6
-  - cardName: Imperm
+    subTag: 8
+  - cardName: Engage
+    copies: 3
+    tag: 0
+    subTag: 8
+  - cardName: Widow Anchor
     copies: 3
     tag: 2
     subTag: 8
-  - cardName: Ghost Belle
+  - cardName: Linkage
     copies: 3
+    tag: 0
+    subTag: 8
+  - cardName: Lemnisgate
+    copies: 1
     tag: 2
-    subTag: 4
-  - cardName: Called by
+    subTag: 5
+  - cardName: Shark Cannon
     copies: 1
     tag: 2
     subTag: 8
+  - cardName: After Burners
+    copies: 1
+    tag: 2
+    subTag: 3
+  - cardName: Area Zero
+    copies: 1
+    tag: 0
+    subTag: 1
+  - cardName: ROTA
+    copies: 1
+    tag: 0
+    subTag: 8
+  - cardName: Thrust
+    copies: 3
+    tag: 5
+    subTag: 7
   - cardName: Droplet
     copies: 3
     tag: 2
-    subTag: 8
-  - cardName: Piri Reis Map
-    copies: 3
-    tag: 0
     subTag: 5
-  - cardName: Engraver
+  - cardName: Fuwa
     copies: 3
-    tag: 0
-    subTag: 5
-  - cardName: Lacrima
-    copies: 1
-    tag: 0
+    tag: 2
     subTag: 7
-  - cardName: Lurrie
+  - cardName: Lightning Storm
     copies: 1
-    tag: 3
-    subTag: 4
-  - cardName: Tract
-    copies: 2
-    tag: 0
-    subTag: 8
-  - cardName: Marshmao
+    tag: 2
+    subTag: 7
+  - cardName: Vision
     copies: 3
-    tag: 0
-    subTag: 1
-  - cardName: Magnet Warrior Sigma Linear Magnum Conductor Plus Minus
-    copies: 2
-    tag: 0
+    tag: 1
     subTag: 8
+  - cardName: Raigeki
+    copies: 1
+    tag: 2
+    subTag: 8
+  - cardName: Pot of Desires
+    copies: 3
+    tag: 1
+    subTag: 8
+  - cardName: Songs
+    copies: 3
+    tag: 2
+    subTag: 3
+  - cardName: Talent
+    copies: 1
+    tag: 1
+    subTag: 7
+  - cardName: Feather Duster
+    copies: 1
+    tag: 2
+    subTag: 3
 --- !u!1 &1101943690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,7 +1906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Run SIM yayyy
+  m_text: I HOPE U DON'T BRICK!!!! HAHAHAHAH
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
