@@ -14,11 +14,11 @@ public class SimulationRunner : MonoBehaviour
 
     public int deckSize;
     public List<CardDefinition> cards;
-   
+
     public void RunSimulation()
     {
         deckSize = 0;
-        Deck deck = new Deck();
+        deck = new Deck();
         deck.cardDefinitions = new List<CardDefinition>();
         
         foreach(var card in cards)

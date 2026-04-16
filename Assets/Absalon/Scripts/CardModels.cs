@@ -1,9 +1,5 @@
 using UnityEngine;
 //poopy butt in the face
-public class CardModels
-{
-    
-}
 
 [System.Serializable]
 public class CardDefinition
