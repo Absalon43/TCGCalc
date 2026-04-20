@@ -2,22 +2,29 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DeckManager : MonoBehaviour
 {
-    private List<Deck> myDecks;
     public Deck activeDeck;
 
     [Header("Card info fields")] public TMP_InputField nameField;
     public TMP_InputField copiesCountField;
     public TMP_Dropdown mainTagDropDown, subTagDropDown;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    [Header("Deck display")] public GameObject cardUIPrefab;
+    public GameObject deckViewContent;
+
+    private void Start()
     {
-        
+        activeDeck = new Deck();
+        SaveSystem.SaveData<Deck>(activeDeck, activeDeck.name);
     }
+    
+    /*
+    public void SaveDeck()
+    {
+    }
+    */
 
     public void AddCard()
     {
@@ -29,7 +36,15 @@ public class DeckManager : MonoBehaviour
         string count = copiesCountField.text;
         if (int.TryParse(count, out int val))
         {
-            newCard.copies = val;
+            if (val <= 3 && val > 0)
+            {
+                newCard.copies = val;
+            }
+            else
+            {
+                Debug.Log("Copies smaller than 0 or bigger than 3, cannot create card");
+                return;
+            }
         }
         else
         {
@@ -59,5 +74,14 @@ public class DeckManager : MonoBehaviour
             newCard.tag = CardDefinition.Tag.Undefined;
         }
 
+        activeDeck.cardDefinitions.Add(newCard);
+        UpdateDeckUI(newCard);
+        SaveSystem.SaveData<Deck>(activeDeck, activeDeck.name);
+    }
+
+    public void UpdateDeckUI(CardDefinition card)
+    {
+        GameObject cardObj = Instantiate(cardUIPrefab, deckViewContent.transform);
+        cardObj.GetComponent<CardUIInstance>().InitializeCard(card, activeDeck);
     }
 }

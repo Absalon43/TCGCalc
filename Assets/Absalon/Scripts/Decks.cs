@@ -5,9 +5,11 @@ public class Decks
     
 }
 
+[System.Serializable]
 public class Deck
 {
-    public List<CardDefinition> cardDefinitions;
+    public string name;
+    public List<CardDefinition> cardDefinitions = new List<CardDefinition>();
 
     public List<CardInstance> BuildDeck()
     {

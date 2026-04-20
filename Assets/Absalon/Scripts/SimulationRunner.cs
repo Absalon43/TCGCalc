@@ -37,6 +37,19 @@ public class SimulationRunner : MonoBehaviour
 
         NewResults.Invoke();
     }
+    
+    public void RunSimulation(Deck deck)
+    {
+        result = Simulation.Run(deck, iterations);
+
+        foreach (var kvp in result.tagHits)
+        {
+            float percent = (float)kvp.Value / iterations * 100f;
+            Debug.Log($"{kvp.Key}: {percent:F2}%");
+        }
+
+        NewResults.Invoke();
+    }
 
     private CardDefinition newCard;
 
